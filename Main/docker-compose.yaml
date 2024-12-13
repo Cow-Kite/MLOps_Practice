@@ -1,0 +1,10 @@
+# sudo docker compose up -d --build
+version: "3"
+
+services:
+  mlflow-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+    - 5001:5000
