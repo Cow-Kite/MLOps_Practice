@@ -4,6 +4,7 @@ import mlflow
 import pandas as pd
 from minio import Minio
 
+# 컨테이너 네트워크 묶기
 # mlflow 
 os.environ["MLFLOW_S3_ENDPOINT_URL"] = "http://mlflow-artifact-store:9000"
 os.environ["MLFLOW_TRACKING_URI"] = "http://mlflow-server:5000"
