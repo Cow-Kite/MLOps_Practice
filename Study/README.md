@@ -9,4 +9,6 @@ https://cow-kite24.tistory.com/346
 ### 3. postgre_gcn.py
 #### MLflow의 Backend Store로 PostgreSQL 활용하기
 https://cow-kite24.tistory.com/347
+### 3-1. postminio_gcn.py
+#### mlflow + minio (data storage) + postgresql (backend store)
 
