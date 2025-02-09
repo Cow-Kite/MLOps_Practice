@@ -11,7 +11,7 @@ import mlflow
 import mlflow.pytorch
 import uuid
 
-run_name = f"GCN_Run_{uuid.uuid4().hex[:8]}"
+RUN_NAME = f"GCN_Run_{uuid.uuid4().hex[:8]}"
 
 class GCN(torch.nn.Module):
     def __init__(self):
@@ -28,7 +28,7 @@ class GCN(torch.nn.Module):
     
 
 def train_node_classifier(model, graph, optimizer, criterion, n_epochs=200):
-    with mlflow.start_run(run_name=run_name):
+    with mlflow.start_run(run_name=RUN_NAME):
         mlflow.log_param("epochs", n_epochs)
         mlflow.log_param("learning_rate", optimizer.param_groups[0]['lr'])
         mlflow.log_param("weight_decay", optimizer.param_groups[0]['weight_decay'])
